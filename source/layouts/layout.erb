@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title><%= current_page.data.title || "Middleman" %></title>
+    <%= stylesheet_link_tag "site" %>
+    <%= javascript_include_tag "site" %>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <%= link_to "MyWebsite", "/", class: "nav-logo" %>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <%= link_to "ホーム", "/", class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "アバウト", "/about.html", class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "お問い合わせ", "/contact.html", class: "nav-link" %>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="main-content">
+      <%= yield %>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2024 MyWebsite. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
